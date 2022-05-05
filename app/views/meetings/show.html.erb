@@ -12,4 +12,16 @@
     </div>
     <%= link_to 'Back to meetings', meetings_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
+  <dl class="dl-horizontal">
+    <dt>Name:</dt>
+    <dd><%= @meeting.name %></dd>
+  </dl>
+  <div data-controller="vonage"
+       data-vonage-api-key="<%= Rails.application.credentials.vonage_api.key %>"
+       data-vonage-session-id="<%= @meeting.vonage_session_id %>"
+       data-token="<%= @token %>"
+       data-vonage-name="<%= current_user.name %>"
+  >
+
+  </div>
 </div>
