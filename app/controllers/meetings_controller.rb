@@ -1,5 +1,5 @@
 class MeetingsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user
   before_action :set_meeting, only: %i[ show edit update destroy ]
 
   # GET /meetings or /meetings.json
@@ -9,9 +9,9 @@ class MeetingsController < ApplicationController
 
   # GET /meetings/1 or /meetings/1.json
   def show
-    opentok = OpenTok::OpenTok.new Rails.application.credentials.vonage_api.key,
-                                   Rails.application.credentials.vonage_api.secret
-    @token = opentok.generate_token @meeting.session_id, { name: current_user.name }
+    opentok = OpenTok::OpenTok.new(Rails.application.credentials.vonage_api[:key],
+                                   Rails.application.credentials.vonage_api[:secret])
+    @token = opentok.generate_token @meeting.vonage_session_id, { name: current_user.name }
   end
 
   # GET /meetings/new

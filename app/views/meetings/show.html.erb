@@ -16,8 +16,9 @@
     <dt>Name:</dt>
     <dd><%= @meeting.name %></dd>
   </dl>
-  <div data-controller="vonage"
-       data-vonage-api-key="<%= Rails.application.credentials.vonage_api.key %>"
+  <div id="videos"
+       data-controller="vonage"
+       data-vonage-api-key="<%= Rails.application.credentials.vonage_api[:key] %>"
        data-vonage-session-id="<%= @meeting.vonage_session_id %>"
        data-token="<%= @token %>"
        data-vonage-name="<%= current_user.name %>"

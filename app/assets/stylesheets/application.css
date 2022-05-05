@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+#videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+.OT_root {
+    height: 240px !important;
+}
