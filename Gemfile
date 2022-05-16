@@ -75,3 +75,5 @@ group :test do
 end
 
 gem 'opentok', '~> 4.3'
+
+gem "devise", "~> 4.8"
