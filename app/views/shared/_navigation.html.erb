@@ -13,11 +13,7 @@
     </button>
   </div>
   <div class="hidden md:flex items-center space-x-1">
-    <a
-      href=""
-      class="py-4 px-2 text-white border-b-4 border-white-500 font-semibold "
-    >Home</a
-    >
+    <%= link_to "Home", root_path, class: "py-4 px-2 text-white border-b-4 border-white-500 font-semibold" %>
     <a
       href=""
       class="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300"
@@ -28,11 +24,7 @@
       class="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300"
     >Contact Us</a
     >
-    <a
-      href=""
-      class="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300"
-    >Sign Up</a
-    >
-  </div>
+    <%= link_to "Sign Up", new_user_registration_path, class: "py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300" %>
+    <%= link_to "Log In", new_user_session_path, class: "py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300" %>
   </div>
 </nav>
