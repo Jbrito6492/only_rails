@@ -4,6 +4,14 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "mb-4 md:flex md:justify-between") do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="form-input mb-4 rounded-full">
+        <%= f.label :first_name %><br/>
+        <%= f.text_field :first_name, autofocus: true, autocomplete: "first name", class: "w-full rounded-sm" %>
+      </div>
+      <div class="form-input mb-4 rounded-full">
+        <%= f.label :last_name %><br/>
+        <%= f.text_field :last_name, autofocus: true, autocomplete: "last name", class: "w-full rounded-sm" %>
+      </div>
+      <div class="form-input mb-4 rounded-full">
         <%= f.label :email %><br/>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full rounded-sm" %>
       </div>
