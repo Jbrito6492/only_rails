@@ -21,7 +21,7 @@
        data-vonage-api-key="<%= Rails.application.credentials.vonage_api[:key] %>"
        data-vonage-session-id="<%= @meeting.vonage_session_id %>"
        data-token="<%= @token %>"
-       data-vonage-name="<%= current_user.name %>"
+       data-vonage-name="<%= current_user.name.first %>"
   >
 
   </div>

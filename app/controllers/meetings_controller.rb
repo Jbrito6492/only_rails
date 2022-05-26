@@ -11,7 +11,7 @@ class MeetingsController < ApplicationController
   def show
     opentok = OpenTok::OpenTok.new(Rails.application.credentials.vonage_api[:key],
                                    Rails.application.credentials.vonage_api[:secret])
-    @token = opentok.generate_token @meeting.vonage_session_id, { name: current_user.name }
+    @token = opentok.generate_token @meeting.vonage_session_id, { name: current_user.name.first }
   end
 
   # GET /meetings/new
